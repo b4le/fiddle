@@ -19,6 +19,7 @@ class GhibliService {
     };
 
     getPeople(id = '') {
+        console.log('here');
         return this.getData('PEOPLE', id);
     };
     getLocations(id = '') {

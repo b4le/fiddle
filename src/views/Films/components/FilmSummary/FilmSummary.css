@@ -1,0 +1,7 @@
+.film {
+  display: flex;
+  flex: 1 1 40%;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
