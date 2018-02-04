@@ -1,8 +1,9 @@
 // Api Constants
 export const API_URL = 'https://ghibliapi.herokuapp.com';
-export const API_ENDPOINTS = {
+
+// Available Category Types
+export const CATEGORY_TYPES = {
     FILMS: 'films',
-    FILM: 'film',
     PEOPLE: 'people',
     LOCATIONS: 'locations',
     SPECIES: 'species',

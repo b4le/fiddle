@@ -1,0 +1,24 @@
+.navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navigation--primary {
+    background-color: #219de8;
+    color: #ffffff;
+}
+
+.navigation--secondary {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navigation__link {
+    text-align: center;
+
+}
+
+.navigation__title {
+
+}

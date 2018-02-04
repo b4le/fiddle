@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import { CATEGORY_TYPES } from './services/consts';
 
 import Navigation from './components/Navigation/index';
+import DataList from './views/DataList/index';
 
-import Home from './views/Home/index';
 
 import { 
   BrowserRouter as Router,
@@ -13,13 +13,24 @@ import {
 } from 'react-router-dom'
 
 class App extends Component {
+
+  generateRoutes() {
+    return Object.entries(CATEGORY_TYPES).map((category, index) => {
+      const categoryText = category[1];
+      const categoryLink = `/${categoryText}`;
+      return(
+        <Route exact path={categoryLink} key={index} component={DataList}/>
+      ) 
+    });
+  }
+
   render() {
     return (
         <Router>
           <React.Fragment>
             <Navigation></Navigation>
             <Switch>
-              <Route exact path="/" component={Home}/>
+              {this.generateRoutes()}
             </Switch>
           </React.Fragment>
         </Router>
